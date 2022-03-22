@@ -1,8 +1,8 @@
-import './login.css';
+import './Login.css';
 import React from 'react';
 
-
 function Login() {
+    
   return (
     <div  id="loginBox">
       <div>
@@ -21,7 +21,7 @@ function Login() {
             
               <p className="link">
                 <div id="signupLink">
-                  <span>New user? </span><a href="#">click here</a>
+                  <span>New user? </span><button1> <a href="./Signup">SignUp</a></button1>
                 </div>    
               </p> 
         

@@ -1,44 +1,21 @@
+import React, {Component} from 'react';
 import './App.css';
-import React from 'react';
+import Login from'./Login';
+import Signup from './Signup';
 
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
-function App() {
-  return (
-      <div  id="signupBox">
-        <div>
-            <h1>SIGNUP</h1>
-              <div id="email">
-                <input type="text" placeholder="Email" className="name"/>
-              </div>
-
-              <div id="username">
-                <input type="text" placeholder="Username" className="name"/>
-              </div>
-
-              <div id="mobilenumber">
-                <input type="number" placeholder="Mobilenumber" className="name"/>
-              </div>
-
-              <div className="first-input" id="password">  
-                <input type="password" placeholder="Password" className="name"/>
-              </div>
-
-              <div className="second-input" id="password">  
-                <input type="password" placeholder="Confirm Password" className="name"/>
-              </div>
-
-              <div className="login-button" >
-                <button id="submitButton">Signup</button>
-              </div>
-              
-                <p className="link">
-                  <div id="signinLink">
-                    <span>Already have an account ? </span><a href="#">login</a>
-                  </div>    
-                </p> 
-          
-        </div>
-      </div>
-  );
+class App extends Component{
+  render(){
+    return(
+      <Router>
+        <Routes>
+          <Route exact path="/Login" element={<Login/>}/>
+          <Route exact path="/Signup" element={<Signup/>}/>
+        </Routes>
+      </Router>
+    )
+  }
 }
+
 export default App;

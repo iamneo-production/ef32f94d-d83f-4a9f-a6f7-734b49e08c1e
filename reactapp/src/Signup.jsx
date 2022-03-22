@@ -1,8 +1,8 @@
-import './register.css';
+import './Signup.css';
 import React from 'react';
 
-
 function Register() {
+
   return (
     <body>
       <div  id="signupBox">
@@ -34,7 +34,7 @@ function Register() {
               
                 <p className="link">
                   <div id="signinLink">
-                    <span>Already have an account ? </span><a href="#">login</a>
+                    <p> Already having an Account? <button1> <a href="./Login">Login</a></button1></p>
                   </div>    
                 </p> 
           
