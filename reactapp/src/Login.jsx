@@ -1,18 +1,47 @@
 import './Login.css';
 import React from 'react';
+import { useForm } from "react-hook-form";
 
-function Login() {
-    
+const Login =() => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    trigger,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
+
   return (
     <div  id="loginBox">
-      <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
           <h1>Login</h1>
+          
             <div id="email">
-              <input type="text" placeholder="Email" className="name"/>
-            </div>
+              
+              <input type="email" placeholder="Enter the email" id="name" className={`form-control ${errors.email && "invalid"}`} 
+                {...register("email", { required: "Email is Required" ,
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Invalid email address",
+                }})}
+                onKeyUp={() => {
+                  trigger("email");
+                }}/>
 
+                {errors.email && (
+                <small className="text-danger">{errors.email.message}</small>
+              )}
+            </div>
+                        
             <div className="second-input" id="password">  
-              <input type="password" placeholder="Password" className="name"/>
+              <input type="password" placeholder="Enter the password" id="name" />
+              
             </div>
 
             <div className="login-button" >
@@ -21,11 +50,11 @@ function Login() {
             
               <p className="link">
                 <div id="signupLink">
-                  <span>New user? </span><button1> <a href="./Signup">SignUp</a></button1>
+                  <span>New user? </span><br></br><button1> <a href="./Signup">SignUp</a></button1>
                 </div>    
               </p> 
         
-      </div>
+      </form>
     </div>
   );
 }

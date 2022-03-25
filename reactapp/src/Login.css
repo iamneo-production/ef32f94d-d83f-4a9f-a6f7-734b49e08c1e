@@ -3,16 +3,19 @@
 }
 
 body{
-  background-color: rgba(147, 214, 235, 0.822);
-  
+background-image: url('bgImg.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
 }
+
 
 #loginBox{
   text-align: center;
   display:flex;
   justify-content: center;
   height: 400px;
-  width: 500px;
+  width: 400px;
   float: left;
   padding: 30px;
   margin-left: 10%;
@@ -27,6 +30,7 @@ body{
     padding: 20px;
     font-family: serif;
     font-weight: bolder;
+    
   }
 
 .container-image {
@@ -61,8 +65,8 @@ input{
     padding: 14px 0 0 25px;
 }
 
-.name{
-    padding-left: 70px;
+#name{
+    padding-left: 10px;
     font-size: 20px;
 }
 #password{
@@ -70,7 +74,7 @@ input{
 }
 
 #submitButton{
-    width: 150px;
+    width: 100px;
     height: 50px;
     border-radius: 15px;
     background-color: #e923ad;
@@ -84,7 +88,9 @@ input{
   color: #f01809;
 }
 .login-button{
-    padding-top: 25px; 
+    padding-top: 25px;
+
+    
 }
 
 .link{
@@ -96,11 +102,35 @@ input{
  }
 
  a:hover{
-  color: rgb(245, 81, 16);
+  color: rgb(241, 69, 1);
 }
 
 #signupLink{
-  padding-top: 15px;
+  
   font-size:20px;
   color: rgb(0, 0, 0);
+ }
+
+ #signupLink p{
+  font-size:20px;
+  
+ }
+ label{
+   font-size: larger;
+   font-family: Arial, Helvetica, sans-serif;
+   float: left;
+ }
+
+ .invalid {
+  border:1px solid red !important;
+  font-size: 20px;
+ }
+ 
+ .invalid {
+  border:1px solid red !important;
+  color: #f01809;
+ }
+
+ small{
+   color: #f01809;
  }
