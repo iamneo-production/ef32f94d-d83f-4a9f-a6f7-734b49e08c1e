@@ -38,7 +38,7 @@ const Login =() => {
                 <small className="text-danger">{errors.email.message}</small>
               )}
             </div>
-                        
+                      
             <div className="second-input" id="password">  
               <input type="password" placeholder="Enter the password" id="name" />
               
